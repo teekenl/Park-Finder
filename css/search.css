@@ -1,0 +1,969 @@
+/*-----------------------------
+                               |
+ * Filename: search.css        |
+                               |
+ * Version: v1.0               |
+ * Website: search.php         |
+ * Author: Ken and Leong       |
+                               |
+                               |
+-------------------------------*/
+
+body{
+    font-family: Calibri, sans-serif;
+    overflow-x: hidden;
+}
+
+/* The wrapper to contain the search box */
+#search-wrapper {
+    position: absolute;
+    left:-1px;
+    width: 100%;
+    height: 120px;
+    background-color: #444444;
+}
+
+/* The background wrapper to contain search box */
+#nav-background-wrapper {
+    position: absolute;
+    left: -8px;
+    border-right: 10px solid transparent;
+    z-index: -500;
+    width: 100%;
+    height: 2000px;
+    background-color: #ededed;
+}
+
+/* The Wrapper to contains the search button for getting current location */
+#search-location-places {
+    position: absolute;
+    left:25%;
+    top:28%;
+}
+
+/* To hide down arrow in input with datalist usage */
+input::-webkit-calendar-picker-indicator {
+    display: none;
+}
+
+/* CSS Design for input text field in search box */
+input[type=text]#search-text {
+    height: 50px;
+    width: 700px;
+    font-size:1.1em;
+    box-sizing: border-box;
+    border-radius: 3px;
+    padding:5px 0 5px 10px;
+}
+
+/* CSS Design for input text field in search box when it is focused */
+input[type=text]#search-text:focus {
+    outline:none;
+    border-color: dodgerblue;
+    border-width: 2px;
+}
+
+/* To hide down arrow in input text field with datalist usage */
+input[type=text]::-webkit-input-placeholder {
+    font-size:1.1em;
+}
+
+/* CSS Design for placeholder in textarea (Mozila Firefox) */
+textarea::-moz-placeholder {
+    font-size:1.1em;
+}
+
+/* CSS Design for search button in search box */
+button#submit-search-button {
+    color: white;
+    font-weight: bold;
+    border-radius: 3px;
+    cursor: pointer;
+    background-color: dodgerblue;
+    border-color: dodgerblue;
+    font-size:1.0em;
+    padding:14px 40px 14px 40px;
+}
+
+/* CSS Design for search button in search box when it is hover */
+button#submit-search-button:hover {
+    outline: none;
+}
+
+/* The number of total results found */
+#result-title-count {
+    position: absolute;
+    top:28%;
+    left:25%;
+}
+
+/* The wrapper contains the search results */
+#search-result-wrapper {
+    position: absolute;
+    top:31%;
+    left:25%;
+    width: 60%;
+    height:auto;
+}
+
+/* The sub-wrapper or container for each item or result */
+.sub-result-container {
+    border: solid 1px #e1e1e1;
+    position: relative;
+    width: 100%;
+    height:auto;
+    display: inline-block;
+    padding: 8px 5px 5px 8px;
+    margin-top:20px;
+    background-color: white;
+    -webkit-box-shadow: 1px 2px 5px 0 rgba(0,0,0,0.5);
+    -moz-box-shadow: 1px 2px 5px 0 rgba(0,0,0,0.5);
+    box-shadow: 1px 2px 5px 0 rgba(0,0,0,0.5);
+}
+
+/* The result place description in sub-container */
+.result-places-description {
+    position: absolute;
+    top: 34%;
+    left: 27%;
+    width: 50%;
+    font-size: 1.2em;
+}
+
+/* The result place name or title in sub-container */
+.result-places-title {
+    position: absolute;
+    top: -10%;
+    left:27%;
+    font-weight: bold;
+    font-size: 1.8em;
+}
+
+/* The result rating in sub-container */
+.result-places-rating {
+    position: absolute;
+    top: 15%;
+    left: 27%;
+    display: flex;
+}
+
+/* The result's number of review in sub-container */
+.result-places-number-review {
+    position: absolute;
+    top: 60%;
+    left: 27%;
+    font-size: 1.2em;
+
+}
+
+/* Draw a divider before the view button of each sub-container */
+.sub-result-rating-button:before {
+    position: absolute;
+    content: "";
+    display: block;
+    background-color: #e1e1e1;
+    width: 170px;
+    height: 1px;
+    top: 50%;
+    left: 70%;
+    -ms-transform: rotate(90deg); /* IE 9 */
+    -webkit-transform: rotate(90deg); /* Chrome, Safari, Opera */
+    transform: rotate(90deg)
+}
+
+/* CSS Design button of each sub-container */
+.sub-result-rating-button button {
+    position: absolute;
+    top: 50%;
+    right: 5%;
+    cursor:pointer;
+    color:white;
+    font-weight: bold;
+    font-size: 1.2em;
+    padding: 13px 35px 13px 35px;
+    border-radius: 5px;
+    background-color: #66a266;
+}
+
+/* distance travel of each sub-container */
+.sub-result-distance {
+    position: absolute;
+    right:5%;
+    top: 20%;
+    width: auto;
+    height: auto;
+    z-index: 1000;
+    font-size: 1.1em;
+    color: grey;
+}
+
+/* CSS Design button of each sub-container when it is hover */
+.sub-result-rating-button button:hover {
+    outline: none;
+}
+
+/* CSS Design banner of each sub-container */
+.rating-level-banner {
+    position: absolute;
+    text-align: center;
+    top: -7%;
+    right: 0;
+    color: white;
+    background-color: #009700;
+    width: auto;
+    height: auto;
+    padding: 5px 10px 5px 10px;
+}
+
+/* Wrapper to contain the advanced search option */
+#advancedSearch {
+    position: absolute;
+    top: 34%;
+    left: 8%;
+    width: 15%;
+    height:auto;
+    padding: 8px;
+    background-color: white;
+    -webkit-box-shadow: 1px 2px 3px 1px rgba(0,0,0,0.5);
+    -moz-box-shadow: 1px 2px 3px 1px rgba(0,0,0,0.5);
+    box-shadow: 1px 2px 3px 1px rgba(0,0,0,0.5);
+}
+
+/* Header or title of advanced search wrapper */
+#headerSearch {
+    text-align: center;
+    color:#4d4d4d;
+    font-size:1.1em;
+    margin: 8px;
+    letter-spacing: 1px;
+    padding: 8px;
+    border-bottom: 1px solid #4d4d4d;
+}
+
+/* Wrapper of suburb search in advanced search */
+#suburbSearch{
+    margin-top: 8px;
+    font-weight: bold;
+    color:#000000;
+    padding: 1px 1px 20px 8px;
+    font-size: 1.1em;
+    border-bottom: 1px solid #dddddd;
+}
+
+/* Wrapper of suburb search in advanced search */
+#ratingSearch {
+    margin-top: 8px;
+    font-weight:bold;
+    color:#000000;
+    padding: 1px 1px 20px 8px;
+    font-size: 1.1em;
+    border-bottom: 1px solid #dddddd;
+}
+
+/* Input of surburb's choice in advanced seach wrapper
+ * The reason of causing error: background-position-x has been moved to CSS4
+ * url support claim: https://stackoverflow.com/questions/9653685/is-background-position-x-background-position-y-a-standard-w3c-css-property
+ * The reason of using background position is to position my down arrow image to let user
+ * know the list is dropdown-enabled.
+ * Note: That's some part in this css maybe using background-position-x as well.
+ */
+#choiceSuburb {
+    font-size: 1.0em;
+    border: 1px solid #999999;
+    cursor:pointer;
+    font-weight: normal;
+    border-radius: 2px;
+    background: url('../img/expandArrow.png') no-repeat right;
+    background-position-x: 160px;
+    background-size: 25px;
+    width: 70%;
+    padding: 5px 5px 5px 15px;
+    margin: 25px 5px 20px 5px;
+}
+
+/* Input of rating's choice in advanced seach wrapper */
+#choiceRating {
+    font-size: 1.0em;
+    border: 1px solid #999999;
+    cursor:pointer;
+    font-weight: normal;
+    border-radius: 2px;
+    background: url('../img/expandArrow.png') no-repeat right;
+    background-position-x: 160px;
+    background-size: 25px;
+    width: 70%;
+    padding: 5px 5px 5px 15px;
+    margin: 25px 5px 20px 5px;
+}
+
+/* Wrapper to contain the button for getting current location in advanced seach wrapper */
+#currentLocationSearch{
+    margin-top: 8px;
+    font-weight: bold;
+    color:#000000;
+    padding: 1px 1px 20px 8px;
+    font-size: 1.1em;
+}
+
+/* Sub-wrapper to contain the button for getting current location in advanced seach wrapper */
+#readCurrentLocation_search{
+    text-decoration: none;
+    color: #FFFFFF;
+    font-weight: normal;
+    margin: 30px 2px 5px 2px;
+    padding: 10px 5px 10px 5px;
+    text-align: center;
+    border-radius: 2px;
+    background-color: #2196F3;
+    cursor:pointer;
+}
+
+/* The modal map to view item in google map */
+#modal-map {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 2000;
+    top:0;
+    left: 0;
+    margin-top: -1000px;
+    background: rgba(0,0,0,0.8);
+    display: block;
+}
+
+/* The wrapper to contain modal map */
+#map-wrapper {
+    position: relative;
+    width: 60%;
+    height: 60%;
+    top: 3%;
+    background: white;
+    left: 20%;
+}
+
+/* The area of google map located */
+#map-canvas{
+    position: relative;
+    top: 10%;
+    width:100%;
+    height:700px;
+}
+
+/* The close button for modal map wrapper */
+#map-wrapper-close {
+    position: absolute;
+    top: 2%;
+    right: 0;
+    width: auto;
+    height: auto;
+    cursor:pointer;
+    margin: 0 15px 5px 0;
+}
+
+/* The close button for modal map wrapper when it is hover */
+#map-wrapper-close:hover{
+    color: #000;
+}
+
+/* button to open the modal map box */
+#view-map {
+    position: absolute;
+    z-index: 1;
+    top: 25%;
+    left:72%;
+    color: white;
+    font-size: 1.2em;
+    font-family: inherit;
+    padding:15px 80px 15px 80px;
+    background-color: #4d4d4d;
+    border:none;
+    outline: none;
+    cursor: pointer;
+    border-radius: 2px;
+    box-shadow: 0 1px 1px 2px rgba(0,0,0,0.2);
+}
+
+/* button to open the modal map box when it is clicked */
+#view-map:active {
+    background-color: #444444;
+}
+
+/* The location search element */
+#location-marker_search{
+    position: absolute;
+    left: 15%;
+}
+
+/* The sub-wrapper for location search element */
+#readCurrentLocation_search:active{
+    background-color: #2b79ff;
+}
+
+/* The wrapper to contain footer */
+#footer{
+    color: white;
+    font-size: 1.3em;
+    position: absolute;
+    top:230%;
+    left:-2px;
+    width: 100%;
+    height: 50%;
+    background-color: #aaaaaa;
+}
+
+/* The wrapper to contain the footer content */
+#footer #footer-wrapper{
+    width: 80%;
+}
+
+/*The right wrapper of footer content */
+#footer #right-wrapper {
+    float: right;
+}
+
+/*The left wrapper of footer content */
+#footer #left-wrapper {
+    float:left;
+    position: absolute;
+    left:25%;
+}
+
+/* CSS Design for select tag */
+select{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    font-size: 0.9em;
+    border-radius: 2px;
+    width: 193px;
+    font-weight: normal;
+    cursor: pointer;
+    display: none;
+    z-index:1000;
+}
+
+/* CSS Design for select tag with rating list */
+select#ratingList{
+    position: absolute;
+    top: 32%;
+    left: 8%;
+}
+
+/* CSS Design for select tag with suburb list */
+select#suburbList {
+    position: absolute;
+    top: 60%;
+    left: 8%;
+}
+
+/* CSS Design for option selector in select tag */
+option {
+    padding: 5px 5px 5px 15px;
+}
+
+/* CSS Design for option selector in select tag when it is hover */
+option:hover{
+    color:#000000;
+    background-color:#ededed;
+}
+
+/* Add Star Shape CSS Tricks*/
+
+[class*="star-"] {
+    position: relative;
+    display: block;
+    color: #55f221;
+    width: 0;
+    height: 0;
+    border-radius: 5px;
+    border-right:  12px solid transparent;
+    border-bottom: 9px  solid #55f221;
+    border-left:   12px solid transparent;
+    -moz-transform:    rotate(35deg);
+    -webkit-transform: rotate(35deg);
+    -ms-transform:     rotate(35deg);
+    -o-transform:      rotate(35deg);
+}
+
+[class*="star-"]:before {
+    border-radius: 5px;
+    border-bottom: 10px solid #55f221;
+    border-left: 3px solid transparent;
+    border-right: 3px solid transparent;
+    position: relative;
+    height: 0;
+    width: 0;
+    top: -5px;
+    left: -8px;
+    display: block;
+    content: '';
+    -webkit-transform: rotate(-35deg);
+    -moz-transform:    rotate(-35deg);
+    -ms-transform:     rotate(-35deg);
+    -o-transform:      rotate(-35deg);
+}
+
+[class*="star-"]:after {
+    position: absolute;
+    display: block;
+    color: #55f221;
+    top: 3px;
+    left: -14px;
+    width: 0;
+    height: 0;
+    border-radius: 5px;
+    border-right: 12px solid transparent;
+    border-bottom: 9px solid #55f221;
+    border-left: 12px solid transparent;
+    -webkit-transform: rotate(-70deg);
+    -moz-transform:    rotate(-70deg);
+    -ms-transform:     rotate(-70deg);
+    -o-transform:      rotate(-70deg);
+    content: '';
+}
+
+/* Add Pagination CSS Tricks */
+#pagination {
+    position: absolute;
+    top:195%;
+    left:50%;
+    display: inline-block;
+    vertical-align: middle;
+    padding: 1px 2px 4px 2px;
+}
+
+#pagination a, #pagination i {
+    display: inline-block;
+    vertical-align: middle;
+    width: 40px;
+    height: 30px;
+    color: #4d4d4d;
+    background-color: transparent;
+    text-align: center;
+    font-size: 1.2em;
+    padding: 3px 0 2px 0;
+    -webkit-user-select:none;
+    -moz-user-select:none;
+    -ms-user-select:none;
+    user-select:none;
+}
+
+#pagination a {
+    margin: 0 2px 0 2px;
+    border-radius: 4px;
+    cursor: pointer;
+    color: #4d4d4d;
+    background-color: transparent;
+    text-shadow: 0 1px 1px #FFF;
+
+}
+
+#pagination i {
+    cursor: pointer;
+    margin: 0 3px 0 3px;
+}
+
+#pagination a.current, #pagination i.current {
+    border: 1px solid #E9E9E9;
+    box-shadow: 0 1px 1px #999;
+    background-color: #4d4d4d;
+    color: white;
+}
+
+#pagination a:hover, #pagination i:hover{
+    border: 1px solid #4d4d4d;
+}
+
+/* Desktop size to standard 1700 (devices and browsers) */
+@media only screen and (max-width:  1700px) {
+    .sub-result-container .result-places-title,
+    .sub-result-container .result-places-rating ,
+    .sub-result-container .result-places-description,
+    .sub-result-container .result-places-number-review {
+        left: 29%;
+    }
+
+    #view-map {
+        position: absolute;
+        font-size: 0.9em;
+        height: auto;
+        top: 26%;
+        left:71%;
+    }
+    select {
+        width: 82%;
+    }
+    select#suburbList,
+    select#ratingList {
+        position: relative;
+        margin-top: -20px;
+        left: 2%;
+    }
+    #choiceRating, #choiceSuburb {
+        background-position-x: 140px;
+        background-size: 18px;
+    }
+
+    #pagination {
+        top: 205%;
+    }
+
+    #currentLocationSearch #readCurrentLocation_search img {
+        display: none;
+    }
+
+}
+
+/* Desktop size to standard 1500 (devices and browsers) */
+@media only screen and (max-width: 1500px) {
+    .dropdown-login {
+        left: 86%;
+    }
+    .sub-result-container .result-places-title {
+        font-size: 1.4em;
+        width: 40%;
+    }
+    .sub-result-container .result-places-rating {
+        top: 23%;
+    }
+    .sub-result-container .result-places-title,
+    .sub-result-container .result-places-rating ,
+    .sub-result-container .result-places-description,
+    .sub-result-container .result-places-number-review {
+        left: 32%;
+    }
+
+    #choiceRating, #choiceSuburb {
+        background-position-x: 120px;
+        background-size: 18px;
+    }
+    .sub-result-rating-button:before {
+        top: 50%;
+        left: 65%;
+    }
+
+}
+
+/* Desktop size to standard 1300 (devices and browsers) */
+@media only screen and (max-width: 1300px) {
+    .sub-result-container .result-places-title,
+    .sub-result-container .result-places-rating ,
+    .sub-result-container .result-places-description,
+    .sub-result-container .result-places-number-review{
+        left: 39%;
+    }
+
+    .sub-result-rating-button:before{
+        left: 62%;
+    }
+
+    input[type=text]#search-text {
+        width: 550px;
+    }
+
+    #advancedSearch {
+        left: 3%;
+        width: 20%;
+    }
+
+    #currentLocationSearch #readCurrentLocation_search {
+        width: 80%;
+    }
+
+    #choiceRating, #choiceSuburb {
+        width: 70%;
+        background-position-x: 150px;
+        background-size: 18px;
+    }
+
+    #view-map {
+        left:68%;
+    }
+    #footer {height:100%;}
+
+    #footer #right-wrapper {
+        position: absolute;
+        float: left;
+        top: 50%;
+        left: 25%;
+    }
+
+    #footer #left-wrapper {
+        float: left;
+        position: absolute;
+        left:25%;
+    }
+    .dropdown-login {
+        left:85%;
+    }
+}
+
+/* Desktop size to standard 1100 (devices and browsers) */
+@media only screen and (max-width: 1100px) {
+    .sub-result-container [class*="result-places-"] {
+        left: 37%;
+    }
+
+    .sub-result-container .result-places-number-review {
+        width: 28%;
+    }
+    .sub-result-container .result-places-description {
+        width: 25%;
+    }
+    .sub-result-container .sub-result-image > img {
+        width: 200px;
+        visibility: visible;
+    }
+
+    .sub-result-container .sub-result-rating-button:before{
+        visibility: hidden;
+    }
+
+    #choiceSuburb,#choiceRating{
+        width: 150px;
+        background-position-x: 132px;
+    }
+    #currentLocationSearch #readCurrentLocation_search {
+        width: 170px;
+    }
+
+    .dropdown-login{
+        left: 83%;
+    }
+}
+
+/* Tablet Portrait size to standard 960 (devices and browsers) */
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+    input[type=text]#search-text {
+        width: 400px;
+    }
+    .sub-result-container {
+        left: 13%;
+    }
+    #result-title-count {
+        left: 34%;
+    }
+    #view-map {
+        left: 65%;
+        width: 29%;
+    }
+    .sub-result-container .sub-result-rating-button:before{
+        visibility: visible;
+        left: 48%;
+    }
+    .sub-result-container .result-places-title {
+        width: 60%;
+    }
+    .sub-result-container [class*="result-places-"] {
+        width: 60%;
+        left: 7%;
+    }
+
+    #advancedSearch {
+        width: 25%;
+    }
+
+    .sub-result-container .result-places-number-review {
+        width: 50%;
+    }
+    .sub-result-container .sub-result-image > img {
+        visibility: hidden;
+    }
+    .dropdown-login{
+        width: 230px;
+        left: 77%;
+    }
+}
+
+/* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+    input[type=text]#search-text {
+        width: 250px;
+    }
+    #view-map {
+        left: 60%;
+        padding: 15px 0 15px 0;
+        width: 35%;
+    }
+    #advancedSearch {
+        width: 26%;
+        display:none;
+    }
+    #choiceSuburb,#choiceRating{
+        width: 110px;
+        background-position-x: 112px;
+    }
+    #currentLocationSearch #readCurrentLocation_search {
+        width: 125px;
+    }
+    #result-title-count {
+        left:34%;
+    }
+    .sub-result-container {
+        left: -35%;
+        width: 150%;
+    }
+    .sub-result-container .result-places-number-review {
+        width: 60%;
+    }
+    .sub-result-container .result-places-title {
+        font-size:1.2em;
+        width: 60%;
+    }
+    .sub-result-container .result-places-title {
+        font-size: 1.4em;
+    }
+    .sub-result-container [class*="result-places-"] {
+        left: 37%;
+    }
+    .sub-result-container .sub-result-image > img {
+        visibility: visible;
+    }
+    .dropdown-login {
+        width: 230px;
+        left: 66%;
+    }
+    #menu a #main-picture {
+        position: absolute;
+        left: 0;
+    }
+    #loader {
+        width: 50px;
+        height: 50px;
+        left: 45%;
+    }
+    #pagination {
+        left:45%;
+    }
+}
+
+/* Desktop size to standard 500 and 700 (devices and browsers) */
+@media only screen and (min-width: 550px) and (max-width:700px) {
+    .sub-result-container .sub-result-image > img {
+        visibility: hidden;
+    }
+    .sub-result-container [class*="result-places-"] {
+        width: 70%;
+        left: 2%;
+    }
+    #result-title-count {
+        left:5%;
+    }
+}
+
+/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
+@media only screen and (min-width: 280px) and (max-width: 550px) {
+    input[type=text]#search-text {
+        width: 200px;
+    }
+    .sub-result-container {
+        left: -35%;
+        width: 430px;
+    }
+
+    .sub-result-container [class*="result-places-"] {
+        width: 70%;
+        left: 2%;
+    }
+
+    .sub-result-container .sub-result-image > img {
+        visibility: hidden;
+    }
+
+    #advancedSearch {
+        display:none;
+    }
+    #result-title-count {
+        left: 10%;
+    }
+    #view-map {
+        left:50%;
+        padding: 15px 0 15px 0;
+        min-width: 43%;
+    }
+    #menu a #main-picture {
+        position: absolute;
+        left: 0;
+    }
+    .dropdown-login {
+        left: 62%;
+    }
+    #loader{
+        width: 50px;
+        height: 50px;
+        left: 45%;
+    }
+}
+
+/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
+@media only screen and (max-width: 479px) {
+    input[type=text]#search-text {
+        margin-left: -43px;
+        width: 190px;
+    }
+
+    .sub-result-container [class*="result-places-"] {
+        left: 2%;
+    }
+
+    .sub-result-container {
+        left: -35%;
+        width: 400px;
+    }
+
+    .sub-result-container .result-places-number-review {
+        width: 60%;
+    }
+
+    .sub-result-container .sub-result-image > img {
+        visibility: hidden;
+    }
+
+    .dropdown-login {
+        left:54%;
+    }
+    #loader{
+        width: 50px;
+        height: 50px;
+        left: 45%;
+    }
+    #pagination {
+        left: 30%;
+    }
+}
+
+/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
+@media only screen and (max-width: 479px) {
+    input[type=text]#search-text {
+        margin-left: -83px;
+        width: 190px;
+    }
+    #view-map {
+        margin-left: 20px;
+    }
+    .sub-result-container .result-places-number-review {
+        width: 80%;
+    }
+    .sub-result-container .result-places-description {
+        width: 80%;
+    }
+    .sub-result-rating-button p.sub-result-distance{
+       display: none;
+    }
+    .sub-result-container button {
+        height: 50px;
+        top: 20%;
+        font-size: 1.2em;
+    }
+    .sub-result-container {
+        width: 310px;
+    }
+    .dropdown-login {
+        left: 44%;
+    }
+    #menu a #main-picture {
+        position: absolute;
+        left: 0;
+    }
+
+}
+

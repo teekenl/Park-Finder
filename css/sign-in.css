@@ -1,0 +1,318 @@
+/*-----------------------------
+                               |
+ * Filename: sign-in.css       |
+                               |
+ * Version: v1.0               |
+ * Website: signin.php         |
+ * Author: Ken and Leong       |
+                               |
+                               |
+-------------------------------*/
+
+body{
+    font-family: Calibri, sans-serif;
+}
+
+/* The wrapper to contain the login and non-login state */
+.login-in-wrapper#login-state,
+.login-in-wrapper#not-login-state {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top:-20px;
+}
+
+/* Further design for login state wrapper */
+.login-in-wrapper#login-state {
+    z-index: 888;
+}
+
+/* The Login form */
+.login {
+    z-index:888;
+    position:relative;
+    width: 40%;
+    min-height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    float:left;
+    background: #50a3a2;
+    background: -webkit-linear-gradient(top left, #ffffff 0%, #b5ecff 100%);
+    background: -moz-linear-gradient(top left, #ffffff 0%, #b5ecff 100%);
+    background: -o-linear-gradient(top left, #ffffff 0%, #b5ecff 100%);
+    background: linear-gradient(to bottom right, #ffffff 0%, #b5ecff 100%);
+}
+
+/* The wrapper to contain the company picture in the sign-up wrapper */
+.picture-wrapper {
+    z-index:888;
+    position: absolute;
+    width: 60%;
+    height:inherit;
+    float:right;
+}
+
+/* The title of sign-up form */
+.title {
+    z-index:888;
+    color: #444;
+    font-size: 1.5em;
+    font-weight: bold;
+    width: 53%;
+    margin: 0 0 30px 0;
+    border-bottom: 1px solid #cccccc;
+    padding-bottom: 20px;
+}
+
+/* The CSS Design for strong tag */
+strong {
+    z-index:888;
+    position: relative;
+    width: 53%;
+    padding-bottom: 25px;
+}
+
+/* The CSS Design for input field */
+input {
+    z-index:888;
+    display: block;
+    padding: 15px 10px;
+    margin-bottom: 10px;
+    min-width: 45%;
+    border: 1px solid #ddd;
+    transition: border-width 0.2s ease;
+    border-radius: 2px;
+    color: #000000;
+}
+
+/* The CSS Design when input field is focused */
+input:focus {
+    outline: none;
+}
+
+/* The CSS for p selector */
+p.fa {
+    z-index:888;
+    width: 58%;
+    display: block;
+    justify-content: inherit;
+    position: relative;
+    float:left;
+}
+
+/* The CSS Design for a tag */
+a {
+    z-index:888;
+    font-size: 1.0em;
+    color: #2196F3;
+    text-decoration: none;
+    cursor:pointer;
+}
+
+/* The CSS Design for input submit button */
+input[type=submit] {
+    z-index:888;
+    width: 48%;
+    height: 53%;
+    cursor:pointer;
+    padding: 15px 15px;
+    position: relative;
+    top:10px;
+    background: #2196F3;
+    color: #fff;
+    display: block;
+    border: 0 solid rgba(0,0,0,0.1);
+    border-radius: 2px;
+    transform: rotateZ(0deg);
+    transition: all 0.1s ease-out;
+}
+
+/* The wrapper to contain sign-up link */
+.sign-up-wrapper {
+    z-index:888;
+    position: relative;
+    font-size: 1.2em;
+    top:40px;
+    padding:15px 25px 15px 25px;
+    border-radius:3px;
+    background-color: #ffffff;
+}
+
+/* The animation for bubble */
+.bubble-animation {
+    position: absolute;
+    left: 0;
+    top: -10px;
+    width: 80%;
+    height: 100%;
+    z-index: 1;
+}
+
+/* The error message to show */
+.error-Message {
+    color: red;
+    display: none;
+    font-size: inherit;
+    text-align: right;
+    z-index: 1000;
+}
+
+/* The different box to be used as bubble animation*/
+li {
+    position: absolute;
+    list-style: none;
+    display: block;
+    width: 40px;
+    height: 40px;
+    background-color: #b5ecff;
+    bottom: 0;
+
+    -webkit-animation: square 25s infinite;
+    animation: square 25s infinite;
+
+    -webkit-transition-timing-function: linear;
+    transition-timing-function: linear;
+}
+
+/* The first child */
+li:nth-child(1){
+    left: 10%;
+    top:10%;
+}
+
+/* The second child */
+li:nth-child(2){
+    left: 20%;
+    top:40%;
+    width: 80px;
+    height: 80px;
+    animation-delay: 1s;
+    animation-duration: 5s;
+}
+
+/* The third child */
+li:nth-child(3){
+    left: 25%;
+    top:30%;
+    animation-delay: 2s;
+}
+
+/* The fourth child */
+li:nth-child(4){
+    left: 40%;
+    top:80%;
+    width: 60px;
+    height: 60px;
+    animation-duration: 7s;
+    background-color: #b5ecff;
+}
+
+/* The fifth child */
+li:nth-child(5){
+    left: 70%;
+    top:70%;
+}
+
+/* The sixth child */
+li:nth-child(6){
+    left: 80%;
+    top: 40%;
+    width: 110px;
+    height: 110px;
+    animation-delay: 3s;
+    background-color: #b5ecff;
+}
+
+/* The seventh child */
+li:nth-child(7){
+    left: 28%;
+    top: 55%;
+    width: 140px;
+    height: 140px;
+    animation-delay: 2s;
+}
+
+/* The eighth child */
+li:nth-child(8){
+    left: 55%;
+    top: 25%;
+    width: 25px;
+    height: 25px;
+    animation-delay: 2s;
+    animation-duration: 8s;
+}
+
+/* The ninth child */
+li:nth-child(9){
+    left: 23%;
+    top: 60%;
+    width: 15px;
+    height: 15px;
+    animation-delay: 2s;
+    animation-duration: 9s;
+    background-color: #b5ecff;
+}
+
+/* The tenth child */
+li:nth-child(10){
+    left: 80%;
+    top: 75%;
+    width: 145px;
+    height: 145px;
+    transform: rotate(45deg);
+    animation-delay: 1s;
+}
+
+/* The animation definition for bubble */
+@keyframes square {
+    0%   { transform: translateY(0); }
+    100% { transform: translateY(-700px) rotate(600deg); }
+}
+
+/* Desktop size to standard 1300 (devices and browsers) */
+@media only screen and (max-width: 1300px) {
+    .login-in-wrapper .login > input {
+        width: 80%;
+    }
+}
+
+/* Tablet Portrait size to standard 960 (devices and browsers) */
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+    .login-in-wrapper .login {
+        width: 100%;
+    }
+    .login-in-wrapper .login > input {
+        width: 50%;
+    }
+}
+
+/* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+    .login-in-wrapper .login {
+        width: 100%;
+    }
+    .login-in-wrapper .login > input {
+        width: 50%;
+    }
+}
+
+@media only screen and (min-width: 280px) and (max-width: 550px) {
+    .login-in-wrapper .login {
+        width: 100%;
+    }
+    .login-in-wrapper .login > input {
+        width: 70%;
+    }
+    .login-in-wrapper .sign-up-wrapper {
+        width: 60%;
+    }
+}
+
+/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
+@media only screen and (max-width: 479px) {
+    .login-in-wrapper .login {
+        width: 100%;
+    }
+}

@@ -1,0 +1,42 @@
+/*-----------------------------
+                               |
+ * Filename: loading.css       |
+                               |
+ * Version: v1.0               |
+ * Description: Loading        |
+                animation      |
+ * Author: Ken and Leong       |
+                               |
+                               |
+-------------------------------*/
+
+/* The loading bar to be used all pages when it is needed */
+.loader{
+    position: absolute;
+    top: 40%;
+    left: 48%;
+    border: 10px solid #f3f3f3;
+    border-top: 10px solid #3498db;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 2s linear infinite;
+}
+
+/* The loading bar 2 with different size to be used all pages when it is needed*/
+.loader_2{
+    position: absolute;
+    top: 55%;
+    left: 55%;
+    border: 10px solid #f3f3f3;
+    border-top: 10px solid #3498db;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}

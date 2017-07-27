@@ -1,0 +1,121 @@
+
+/*-----------------------------
+                               |
+ * Filename: dropdown.css      |
+                               |
+ * Version: v1.0               |
+ * Purpose: to create dropdown |
+            for menu           |
+ * Author: Ken and Leong       |
+                               |
+                               |
+-------------------------------*/
+
+
+/* Menu in header */
+#menu {
+    top: 0;
+    left: 0;
+    height: auto;
+    width: 100%;
+    z-index: 1002;
+    display: inline-block;
+    letter-spacing: 1px;
+    padding: 0;
+    font-size: 20px;
+    background-color: white;
+}
+
+/* Nav wrapper to display the picture in the menu */
+#main-picture {
+    position: absolute;
+    left:50%;
+}
+
+/* Dropdown menu for Login */
+.dropdown-login {
+    position: relative;
+    left: 89%;
+    width: 200px;
+    border-left: 1px solid #e2e2e2;
+    margin-top: -8px;
+    border-top: 5px solid #2b79ff;
+    height: auto;
+    display: inline-block;
+    cursor: pointer;
+}
+
+/* Nav Wrapper in dropdown menu */
+.nav-log-in-wrapper {
+    padding:10px;
+    text-align: center;
+}
+
+/* Color change when Nav Wrapper is clicked */
+.nav-log-in-wrapper:active {
+    background-color: #ededed;
+}
+
+
+/* The up arrow icon at the top of Menu
+ * The reason of this error: the pointer after event has been moved to CSS4
+ * url support my claim : https://stackoverflow.com/questions/41406627/css-pointer-events-and-appearance-properties-not-recognized-by-css-validator
+ *
+ * The usage of pointer after even is to create up arrow pointer when the menu is opened.
+ * I have tested in popular browser: Firefox, Explorer, Chrome. It works fine
+ */
+.nav-log-in-wrapper::after {
+    position: absolute;
+    left: 45%;
+    top: 45px;
+    width: 0;
+    height: 0;
+    content: '';
+    display: none;
+    z-index:200;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid #999999;
+    pointer-events: none;
+}
+
+/* The content of menu */
+.dropdown-content {
+    position: absolute;
+    text-align: center;
+    z-index:200;
+    left:25%;
+    top:125%;
+    display: none;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    background-color: #fafafa;
+    border: 1px solid #999999;
+}
+
+
+/* a selector for content of menu */
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    background-color: #fafafa;
+    margin:5px;
+}
+
+/* colour chagens when a selector is clicked or hover */
+.dropdown-content a:hover{
+    background-color: #ededed;
+}
+
+/* to show the content of menu */
+.show {
+    display:block;
+}
+
+/* to show down arrow at the bottom content of menu */
+.show_arrow:after {
+    display: block;
+}
+
+

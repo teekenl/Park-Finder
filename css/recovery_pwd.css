@@ -1,0 +1,307 @@
+/*-----------------------------
+                               |
+ * Filename: recovery_pwd.css  |
+                               |
+ * Version: v1.0               |
+ * Website: recovery_password.php |
+ * Author: Ken and Leong       |
+                               |
+                               |
+-------------------------------*/
+
+body{
+    font-family: Calibri, sans-serif;
+    background-color: white;
+}
+
+/* The wrapper to contain footer */
+#footer{
+    color: white;
+    font-size: 1.3em;
+    position: absolute;
+    top: 100%;
+    left:-2px;
+    width: 100%;
+    height: 50%;
+    background-color: #aaaaaa;
+}
+
+/* The wrapper to contain the footer content */
+#footer #footer-wrapper{
+    width: 80%;
+}
+
+/*The right wrapper of footer content */
+#footer #right-wrapper {
+    float: right;
+}
+
+/*The left wrapper of footer content */
+#footer #left-wrapper {
+    float:left;
+    position: absolute;
+    left:25%;
+}
+
+/*The wrapper to contain the recovery password box */
+#nav-pwd-recovery-wrapper {
+    position: absolute;
+    width: 50%;
+    left: 35%;
+    top: 20%;
+}
+
+/* The wrapper to contain the resend recovery password box. */
+#nav-pwd-recovery-wrapper2 {
+    position: absolute;
+    width: 50%;
+    left: 30%;
+    top: 25%;
+    display: none;
+}
+
+/* The CSS Design for label selector */
+label {
+    font-weight: 600;
+    font-size: 1.2em;
+    padding: 5px 5px 5px 1px;
+}
+
+/* The CSS Design for input text email */
+input[type=email] {
+    font-size: 1.3em;
+    margin: 5px 5px 5px 1px;
+    padding: 10px 10px 10px 10px;
+    width: 70%;
+}
+
+
+/* The CSS Design for input submit button */
+input[type=submit]{
+    color: dodgerblue;
+    padding: 10px 8px 10px 8px;
+    margin: 20px 5px 5px 150px;
+    border-radius: 4px;
+    border: 1px solid  dodgerblue;
+    outline: none;
+    font-weight: 600;
+    font-size: inherit;
+    background: transparent;
+    cursor: pointer;
+}
+
+/* The CSS Design for input submit button */
+input[type=submit]:hover{
+    background-color: dodgerblue;
+    color: white;
+}
+
+/* The CSS Design for resend button */
+#get_password_resend {
+    position: absolute;
+    left: 13%;
+}
+
+/* The error message */
+#error-recovery-message{
+    color: red;
+    font-size: 0.8em;
+}
+
+/* Invalid User modal*/
+.invalid-user-modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Valid User modal*/
+.valid-user-modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+
+/* Modal Content */
+.user-modal-content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    background-color: #fefefe;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 20%;
+    color: #4d4d4d;
+    font-weight: 900;
+    font-size: 1.3em;
+    border-radius: 2px;
+}
+
+/* Button in modal Content */
+.user-modal-content button {
+    margin:auto;
+    background-color:  dodgerblue;
+    padding: 10px 40px 10px 40px;
+    font-size: 0.8em;
+    color: white;
+    border:none;
+    border-radius: 3px;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+
+/* Color change when button in modal content is clicked */
+.user-modal-content button:hover {
+    background-color:#2b79ff;
+}
+
+/* The Close Button */
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+/* Color change when close button is hover or focus */
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Desktop size to standard 1500 (devices and browsers) */
+@media only screen and (max-width: 1500px) {
+    .dropdown-login {
+        left: 86%;
+    }
+}
+
+/* Desktop size to standard 1300 (devices and browsers) */
+@media only screen and (max-width: 1300px) {
+    input[type=submit]{
+        margin-left: 100px;
+    }
+    #footer {height:100%;}
+
+    #footer #right-wrapper {
+        position: absolute;
+        float: left;
+        top: 50%;
+        left: 25%;
+    }
+
+    #footer #left-wrapper {
+        float: left;
+        position: absolute;
+        left:25%;
+    }
+    .dropdown-login {
+        left:85%;
+    }
+}
+
+/* Desktop size to standard 1100 (devices and browsers) */
+@media only screen and (max-width: 1100px) {
+
+    .dropdown-login{
+        left: 83%;
+    }
+
+}
+
+/* Tablet Portrait size to standard 960 (devices and browsers) */
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+    #recovery_email{
+        width: 80%;
+    }
+    .dropdown-login {
+        width: 230px;
+        left: 75%;
+    }
+
+    #menu a #main-picture {
+        position: absolute;
+        left: 0;
+    }
+    input[type=submit]{
+        margin-left: 50px;
+    }
+
+}
+
+/* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+    .dropdown-login {
+        width: 200px;
+        left: 71%;
+    }
+    #recovery_email{
+        width: 100%;
+    }
+    input[type=submit]{
+        margin-left: 20px;
+    }
+}
+
+@media only screen and (min-width: 280px) and (max-width: 550px) {
+    .user-modal-content {
+        width: 50%;
+    }
+    #recovery_email{
+        width: 100%;
+    }
+    input[type=submit]{
+        margin-left: 10px;
+    }
+    .dropdown-login {
+        left: 62%;
+    }
+    #menu a #main-picture {
+        position: absolute;
+        left: 0;
+    }
+}
+
+/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
+@media only screen and (max-width: 479px) {
+    input[type=submit]{
+        margin-left: -40px;
+    }
+    .dropdown-login {
+        left:54%;
+    }
+
+    .user-modal-content {
+        width: 50%;
+    }
+
+    #menu a #main-picture {
+        position: absolute;
+        left: 0;
+    }
+
+}
+

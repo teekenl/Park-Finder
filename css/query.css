@@ -1,0 +1,326 @@
+/*-----------------------------
+                               |
+ * Filename: query.css         |
+                               |
+ * Version: v1.0               |
+ * Website: search_query.php   |
+ * Author: Ken and Leong       |
+                               |
+                               |
+-------------------------------*/
+
+body{
+    font-family: Calibri, sans-serif;
+}
+
+/* Nav Query Wrapper for Search Box */
+#nav-query-search-wrapper {
+    position: relative;
+    top: 20%;
+    left: -8px;
+    background-image: url("../img/home_image5.jpg");
+    background-position: center;
+    background-size: cover;
+    width: 101%;
+    border-right: 30px solid transparent;
+    height: 1000px;
+}
+
+/* Half-transparent overlay at the background of search box */
+#nav-overlay {
+    position: relative;
+    width: 100%;
+    height: 1000px;
+    border-right: 30px solid transparent;
+    background-color: rgba(0,0,0,0.5);
+}
+
+/* The title of search box */
+#sub-query-wrapper-title {
+    font-size: 1.3em;
+    font-weight: 500;
+    background-color: #4d4d4d;
+    color: white;
+    font-family: inherit;
+    padding: 10px;
+    z-index: 2000;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+}
+/* The content of Search Box */
+#sub-query-wrapper {
+    position: absolute;
+    top: 10%;
+    left: 30%;
+    width: 40%;
+    height: 60%;
+    font-size: 1.2em;
+    font-family: inherit;
+    background-color: white;
+    border-radius: 4px;
+    box-shadow: 1px 5px 10px 1px rgba(0,0,0,0.2);
+}
+
+/* The CSS Design for label tag within Search box */
+#querySearch > label {
+    position: relative;
+    left: 19%;
+    margin: 10px;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+/* The wrapper to contain rounded-rating star */
+.circle-rating-choose {
+    position: relative;
+    left: 20%;
+    float: left;
+}
+
+/* The CSS Design for label tag of rounded-rating star */
+.circle-rating-choose > label {
+    position: relative;
+    left: 0;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    float: right;
+    margin: 10px 5px 0 5px;
+    cursor:pointer;
+    border: 1px solid dodgerblue;
+}
+
+/* The error message for query search */
+#errorQueryMessage {
+    position: absolute;
+    top: 12%;
+    left: 20%;
+    font-weight: 500;
+    font-size:0.9em;
+}
+
+/* To hide the down arrow icon in the input tag */
+input::-webkit-calendar-picker-indicator {
+    display: none;
+}
+
+/* The CSS Design for input radio button */
+input[type=radio] {
+    display: none;
+    position: relative;
+}
+
+/*The CSS Design for input text field */
+input[type=text] {
+    position: relative;
+    left: 20%;
+    margin: 5px;
+    padding: 10px 8px 10px 8px;
+    width: 60%;
+    height: auto;
+    font-size: inherit;
+    font-family: inherit;
+}
+
+/* Button for Getting current location option in the Search box */
+#readCurrentLocation {
+    width: 62%;
+    position: relative;
+    left: 20%;
+    text-decoration: none;
+    color: #FFFFFF;
+    font-weight: normal;
+    margin: 15px 2px 5px 2px;
+    padding: 10px 5px 10px 5px;
+    text-align: center;
+    border-radius: 2px;
+    background-color: #2196F3;
+    cursor:pointer;
+}
+
+/* The location marker image in the Get Current Location Button */
+#location-marker{
+    position: absolute;
+    left: 8%;
+}
+
+/* Colour changed when button is clicked to get curren location */
+#readCurrentLocation:active{
+    background-color: #2b79ff;
+}
+
+/* The CSS Design for input submit button */
+input[type=submit] {
+    position: absolute;
+    top: 80%;
+    left: 20%;
+    width: 63%;
+    font-size: 1.1em;
+    font-family: inherit;
+    margin: 5px;
+    color:white;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px 10px 8px 10px;
+    background-color: #f23e47;
+}
+
+/* The color of rating star when it is selected or un-selected */
+.circle-rating-choose > label:hover,
+.circle-rating-choose > label:hover ~ label,
+.circle-rating-choose > input:checked ~ label,
+.circle-rating-choose > input:checked > label {
+    background-color: dodgerblue;
+}
+
+/* The wrapper to contain footer */
+#footer{
+    color: white;
+    font-size: 1.3em;
+    position: absolute;
+    top: 130%;
+    left: 1px;
+    width: 100%;
+    height: 50%;
+    background-color: #aaaaaa;
+}
+
+/* The wrapper to contain the footer content */
+#footer #footer-wrapper{
+    width: 80%;
+}
+
+/*The right wrapper of footer content */
+#footer #right-wrapper {
+    float: right;
+}
+
+/*The left wrapper of footer content */
+#footer #left-wrapper {
+    float:left;
+    position: absolute;
+    left:25%;
+}
+
+/* Desktop size to standard 1500 (devices and browsers) */
+@media only screen and (max-width: 1500px) {
+    .dropdown-login {
+        left: 86%;
+    }
+}
+
+/* Desktop size to standard 1300 (devices and browsers) */
+@media only screen and (max-width: 1300px) {
+    #nav-query-search-wrapper #sub-query-wrapper {
+        left: 20%;
+        width: 60%;
+    }
+    #currentLocationSearch #readCurrentLocation {
+        width: 62%;
+    }
+    #sub-query-wrapper #querySearch input[type=submit] {
+        width: 63%;
+    }
+
+    #footer {height:100%;}
+
+    #footer #right-wrapper {
+        position: absolute;
+        float: left;
+        top: 50%;
+        left: 25%;
+    }
+
+    #footer #left-wrapper {
+        float: left;
+        position: absolute;
+        left:25%;
+    }
+    .dropdown-login {
+        left:85%;
+    }
+}
+
+/* Desktop size to standard 1100 (devices and browsers) */
+@media only screen and (max-width: 1100px) {
+    .dropdown-login{
+        left: 83%;
+    }
+}
+
+/* Tablet Portrait size to standard 960 (devices and browsers) */
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+    #nav-query-search-wrapper #sub-query-wrapper {
+        left: 12%;
+        width: 75%;
+    }
+    .dropdown-login{
+        left: 78%;
+    }
+}
+
+/* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+    #nav-query-search-wrapper #sub-query-wrapper {
+        left: 10%;
+        width: 80%;
+    }
+    .dropdown-login {
+        left: 72%;
+    }
+    #menu a #main-picture {
+        position: absolute;
+        left: 0;
+    }
+}
+
+/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
+@media only screen and (min-width: 280px) and (max-width: 550px) {
+    #nav-query-search-wrapper #sub-query-wrapper {
+        left: 5%;
+        width: 90%;
+    }
+    #currentLocationSearch #readCurrentLocation > img {
+        display: none;
+    }
+    #currentLocationSearch #readCurrentLocation {
+        width: 62%;
+    }
+    #sub-query-wrapper #querySearch input[type=submit] {
+        width: 64%;
+    }
+    #menu a #main-picture {
+        position: absolute;
+        left: 0;
+    }
+    .dropdown-login {
+        left: 64%;
+    }
+
+}
+
+/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
+@media only screen and (max-width: 479px) {
+    .dropdown-login {
+        left:52%;
+    }
+}
+
+@media only screen and (max-width: 350px) {
+    .dropdown-login {
+        left: 44%;
+    }
+    #nav-query-search-wrapper #sub-query-wrapper {
+        left: 5%;
+        width: 90%;
+    }
+    #currentLocationSearch #readCurrentLocation > img {
+        display: none;
+    }
+    #menu a #main-picture {
+        position: absolute;
+        left: 0;
+    }
+}

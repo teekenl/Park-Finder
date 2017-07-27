@@ -1,0 +1,694 @@
+/*-----------------------------
+                               |
+ * Filename: style.css         |
+                               |
+ * Version: v1.0               |
+ * Website: index.php          |
+ * Author: Ken and Leong       |
+                               |
+                               |
+-------------------------------*/
+
+body{
+    font-family: Calibri, sans-serif;
+}
+
+/* Nav wrapper to display the picture in the menu */
+#main-picture {
+    position: relative;
+    top: 12px;
+    left: 20px;
+}
+
+/* Menu in header */
+#menu {
+    top: 0;
+    left: 0;
+    height: auto;
+    width: 100%;
+    z-index: 1002;
+    position: fixed;
+    letter-spacing: 3px;
+    padding: 3px;
+    font-size: 20px;
+    color: #fff;
+    background-color: rgba(0,0,0,0.0);
+}
+
+
+/* a tag in the menu */
+#menu a {
+    cursor: pointer;
+    float: left;
+    display: block;
+    color: #fff;
+    padding: 25px 50px 30px 60px;
+    text-decoration: none;
+}
+/* a tag with the image in the menu */
+#menu a img {
+    position: absolute;
+    left: 2%;
+    top: 12%;
+}
+
+/* a tag with the menu and last child in the menu */
+#menu a.icon,
+#menu a:nth-child(6){
+    display: none;
+}
+
+/* a tag is changed when it is hover */
+#menu a.content:hover,
+#menu a.icon:hover{
+    border-bottom: dodgerblue solid thick;
+    padding-bottom: 10px;
+    color: dodgerblue;
+}
+
+/* Wrapper to contains the home wrapper */
+.wrapper {
+    position: inherit;
+    z-index:-1000;
+    width: 100%;
+    height: 100%;
+
+}
+
+
+/* Wrapper to contains the home wrapper */
+#image-elem{
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    transition: all 0.2s ease;
+}
+
+
+/* Wrapper to contains the title and name of home wrapper */
+.main-content {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top:0;
+    left:0;
+    z-index: 1000;
+    background-color: rgba(0,0,0,0.5);
+}
+
+/* H1 element in main content */
+.main-content h1{
+    text-align: center;
+    font-size: 65px;
+    text-transform: uppercase;
+    color: #fff;
+    padding-top: 15%;
+    margin-bottom: 18px;
+
+}
+
+/* p element in main content */
+.main-content p {
+    text-align: center;
+    letter-spacing: 3px;
+    font-size:20px;
+    color: #aaa;
+}
+
+/* The button for sign-in */
+button.button-sign-in-button{
+    position:absolute;
+    right:3%;
+    top: 20%;
+    bottom: 5px;
+    background-color: transparent;
+    text-align: center;
+    border-radius: 25px;
+    width:200px;
+    height: 50px;
+    padding: 10px;
+    color: #fff;
+    cursor: pointer;
+    letter-spacing: 3px;
+    border-style:solid;
+    -webkit-background-clip: padding-box;
+    -moz-background-clip:    padding;
+    background-clip:         padding-box;
+}
+
+/* The button for learn-more */
+button.button-learn-more{
+    background-color: transparent;
+    text-align: center;
+    width: 150px;
+    height: 50px;
+    margin: 80px auto auto auto;
+    display: block;
+    cursor: pointer;
+    letter-spacing: 3px;
+    font-size: 15px;
+    color: #aaa;
+    border-style: solid;
+    border-radius:2px;
+}
+
+/* The button for learn-more is changed when it is hover */
+button.button-learn-more:hover{
+    color:white;
+    background-color:dodgerblue;
+    border-color:dodgerblue;
+}
+
+/* The button for sign-in is changed when it is hover */
+button.button-sign-in-button:hover{
+    color: white;
+    background-color: dodgerblue;
+    border-color: dodgerblue;
+}
+
+/* The button for sign-in is changed when it is hover or clicked */
+button.button-sign-in-button:active{
+    color:white;
+    background-color: dodgerblue;
+    outline: none;
+}
+
+/* The wrapper to contain the about-us section */
+#about-us {
+    position: absolute;
+    top:200%;
+    left:-2px;
+    width: 100%;
+    height: 100%;
+}
+
+/* The wrapper to contain the feature section */
+#feature {
+    position: absolute;
+    top:100%;
+    left:-2px;
+    width: 100%;
+    height: 100%;
+    color:white;
+}
+/* The image or icon element in feature wrapper */
+#feature #feature-search-picture img,
+#feature #feature-review-picture img {
+    width: 80px;
+    height: 80px;
+}
+
+/* The background image in feature wrapper */
+#feature #feature-background-picture {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url("../img/feature-background-image.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* The background overlay in feature wrapper */
+#feature #feature-background-overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+    background-color: rgba(0,0,0,0.5);
+}
+
+/* The left wrapper in feature wrapper */
+#feature #feature-background-overlay #search-benefit-wrapper {
+    margin: 50px;
+    position: absolute;
+    width: 30%;
+    top:7%;
+    padding:130px;
+}
+
+/* The right wrapper in feature wrapper */
+#feature #feature-background-overlay #review-benefit-wrapper {
+    margin: 50px;
+    position: absolute;
+    width: 30%;
+    left:50%;
+    top:7%;
+    padding:130px;
+}
+
+/* The background image for contact-us section */
+#background-picture {
+    position: absolute;
+    height: 80%;
+    width: 100%;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url("../img/contact-us-background-image.jpg");
+}
+
+/* The wrapper to contain the contact-us section */
+#contact-us{
+    position: absolute;
+    top:200%;
+    left:-2px;
+    width: 100%;
+    height: 100%;
+}
+
+/* The background overlay in the contact-us section  */
+#background-overlay {
+    position: absolute;
+    width: 100%;
+    height: 80%;
+    z-index: 1000;
+    background-color: rgba(0,0,0,0.5);
+}
+
+
+/* The title in the contact-us section */
+#background-overlay > #contact-us-title {
+    margin-top: 10%;
+    text-align: center;
+    font-size: 65px;
+    text-transform: uppercase;
+    color: #ffffff;
+}
+
+/* The background overlay at the back of contact-us description */
+#background-overlay > #contact-us-description {
+    margin-top: -2%;
+    text-align: center;
+    font-size: 18px;
+    color: #ffffff;
+}
+
+/* The wrapper to contain the contact-us form */
+#contact-us-wrapper {
+    position: absolute;
+    left:25%;
+    z-index:1000;
+    border-radius: 3px;
+    background: #ffffff;
+    top:50%;
+    height: 75%;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    -webkit-box-shadow: -1px 2px 23px 0 rgba(0,0,0,0.67);
+    -moz-box-shadow: -1px 2px 23px 0 rgba(0,0,0,0.67);
+    box-shadow: -1px 2px 23px 0 rgba(0,0,0,0.67);
+}
+
+/* The input email field in the contact-us form */
+#contact-us-form > input[type=email]{
+    z-index:888;
+    display: block;
+    padding: 15px 10px;
+    margin-bottom: 10px;
+    width: 93%;
+    border: 1px solid #ddd;
+    border-radius: 2px;
+}
+
+/* The first row of section in the contact-us form */
+#first-row {
+    width: 100%;
+}
+
+/* The input field in the first row of contact-us form */
+#first-row > input {
+    z-index:888;
+    display: inline-block;
+    padding: 15px 10px;
+    width: 43%;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 2px;
+    color: #000000;
+}
+
+/* The input field for lastname in the first row of contact-us form */
+#first-row > input#comment-lastname {
+    margin-left: 17px;
+}
+
+/* The textarea of contact-us form */
+textarea {
+    width: 95%;
+    height: 50%;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 2px;
+    font-family: inherit;
+    font-size: inherit;
+    padding-left: 10px;
+    padding-top: 2px;
+}
+
+/* The placeholder of textarea of contact-us form */
+textarea::-webkit-input-placeholder {
+    font-family: inherit;
+}
+
+/* The input submit button of contact-us form */
+input[type=submit] {
+    z-index:888;
+    width: 98%;
+    height: 12%;
+    cursor:pointer;
+    padding: 15px 15px;
+    position: relative;
+    top:10px;
+    background: #2196F3;
+    color: white;
+    display: block;
+    border: 0 solid rgba(0,0,0,0.1);
+    border-radius: 2px;
+    transform: rotateZ(0deg);
+    transition: all 0.1s ease-out;
+}
+
+/* The wrapper to contain footer */
+#footer{
+    color: white;
+    font-size: 1.3em;
+    position: absolute;
+    top:370%;
+    left:-2px;
+    width: 100%;
+    height: 50%;
+    background-color: #aaaaaa;
+}
+
+/* The wrapper to contain the footer content */
+#footer #footer-wrapper{
+    width: 80%;
+}
+
+/*The right wrapper of footer content */
+#footer #right-wrapper {
+    float: right;
+}
+
+/*The left wrapper of footer content */
+#footer #left-wrapper {
+    float:left;
+    position: absolute;
+    left:25%;
+}
+
+/* Desktop size to standard 1300 (devices and browsers) */
+@media only screen and (max-width: 1300px) {
+    #menu a:not(:first-child) {
+        display: none;
+    }
+    #menu a.icon {
+        float: right;
+        display:block;
+    }
+    .menuWrapper .button-sign-in-button {
+        display: none;
+    }
+    #menu.responsive a.icon{
+        position: fixed;
+        top: 0;
+        right: 0;
+    }
+    #menu.responsive #main-picture {
+        display: none;
+    }
+    #menu.responsive { position: fixed; width: 100%;}
+
+    #menu.responsive a:not(.icon){
+        float:none;
+        display: block;
+        text-align: right;
+        top: 1%;
+        background: rgba(0,0,0,0.8);
+    }
+    #menu.responsive a.icon:hover{
+        border-bottom: transparent solid thick;
+    }
+
+    #menu.responsive a:not(.icon):hover{
+        border-bottom: transparent solid thick;
+        background-color: white;
+        color: black;
+    }
+
+    #feature #feature-background-overlay #search-benefit-wrapper {
+        margin: 5px;
+        position: absolute;
+        width: 50%;
+        top:12%;
+        padding:50px;
+        font-size: 0.9em;
+    }
+
+    #feature #feature-background-overlay #review-benefit-wrapper {
+        margin: 5px;
+        position: absolute;
+        width: 50%;
+        left:50%;
+        top:12%;
+        padding:50px;
+        font-size: 0.9em;
+    }
+
+    #contact-us-wrapper #contact-us-form input {
+        margin-left: 20px;
+        width: 88%;
+    }
+
+    #contact-us-wrapper textarea {
+        margin-left: 20px;
+        width: 90%;
+        height: 35%;
+    }
+
+    #contact-us-wrapper #contact-us-form #submitcomment {
+        left: 7%;
+        width: 80%;
+        height: 10%;
+    }
+
+    #footer {height:100%;}
+
+    #footer #right-wrapper {
+        position: absolute;
+        float: left;
+        top: 50%;
+        left: 25%;
+    }
+
+    #footer #left-wrapper {
+        float: left;
+        position: absolute;
+        left:25%;
+    }
+}
+
+/* Smaller than standard 960 (devices and browsers) */
+@media only screen and (max-width: 959px){
+    .main-content h1 {
+        position: absolute;
+        top: 12%;
+        left: 25%;
+        font-size: 2.8em;
+    }
+    .main-content p{
+        position: absolute;
+        top: 55%;
+        left: 33%;
+    }
+    .main-content .button-learn-more {
+        position: absolute;
+        top: 45%;
+        left: 42%;
+        font-size: 0.8em;
+    }
+
+    #feature #feature-search-picture img,
+    #feature #feature-review-picture img{
+        display: none;
+    }
+
+
+}
+
+/* Tablet Portrait size to standard 960 (devices and browsers) */
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+    .main-content h1 {
+        position: absolute;
+        top: 15%;
+        left: 25%;
+        font-size: 2.8em;
+    }
+    .main-content p{
+        position: absolute;
+        top: 45%;
+        left: 35%;
+    }
+    .main-content .button-learn-more{
+        position: absolute;
+        top: 47%;
+        left: 43%;
+    }
+
+
+}
+
+/* All Mobile Sizes (devices and browser) */
+@media only screen and (max-width: 767px) {
+    .main-content h1 {
+        position: absolute;
+        top: 25%;
+        left: 20%;
+        font-size: 2.1em;
+    }
+    .main-content p{
+        position: absolute;
+        top: 50%;
+        left: 25%;
+        font-size: 1.1em;
+    }
+    .main-content .button-learn-more{
+        position: absolute;
+        top: 52%;
+        left: 38%;
+    }
+    #feature #feature-background-overlay #search-benefit-wrapper {
+        position: absolute;
+        width: 100%;
+        top:12%;
+        left: 2%;
+        font-size: 0.9em;
+    }
+
+    #feature #feature-background-overlay #review-benefit-wrapper {
+        position: absolute;
+        width: 100%;
+        top:45%;
+        left: 2%;
+        font-size: 0.9em;
+    }
+}
+
+/* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+    .main-content h1 {
+        position: absolute;
+        top: 25%;
+        left: 28%;
+        font-size: 2.1em;
+    }
+    .main-content p{
+        position: absolute;
+        top: 50%;
+        left: 35%;
+        font-size: 1.1em;
+    }
+    .main-content .button-learn-more {
+        position: absolute;
+        top: 52%;
+        left: 42%;
+    }
+
+    #contact-us-wrapper {
+        left: 8%;
+        width: 90%;
+    }
+    #contact-us-wrapper #contact-us-form input {
+        margin-left: 20px;
+        width: 88%;
+    }
+
+    #contact-us-wrapper textarea {
+        margin-left: 20px;
+        width: 90%;
+        height: 35%;
+    }
+
+    #contact-us-wrapper #contact-us-form #submitcomment {
+        left: 7%;
+        width: 80%;
+        height: 10%;
+    }
+}
+
+/* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
+@media only screen and (min-width: 280px) and (max-width: 550px) {
+    .main-content h1 {
+        position: absolute;
+        top: 25%;
+        left: 23%;
+        font-size: 2.1em;
+    }
+    .main-content p{
+        position: absolute;
+        top: 50%;
+        left: 30%;
+        font-size: 1.1em;
+    }
+    .main-content .button-learn-more {
+        position: absolute;
+        top: 52%;
+        left: 42%;
+    }
+    #feature #feature-background-overlay #search-benefit-wrapper {
+        position: absolute;
+        width: 100%;
+        top:12%;
+        left: 0;
+        font-size: 0.8em;
+    }
+
+    #feature #feature-background-overlay #review-benefit-wrapper {
+        position: absolute;
+        width: 100%;
+        top:45%;
+        left: 0;
+        font-size: 0.8em;
+    }
+
+    #contact-us-wrapper{
+        left: 5%;
+        width: 95%;
+    }
+    #contact-us-wrapper #contact-us-form #first-row > input,
+    #contact-us-wrapper #contact-us-form input,
+    #contact-us-wrapper #contact-us-form textarea {
+        width: 80%;
+    }
+}
+
+/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
+@media only screen and (max-width: 479px) {
+    .main-content h1 {
+        position: absolute;
+        top: 33%;
+        left: 17%;
+        font-size: 1.7em;
+    }
+    .main-content p{
+        position: absolute;
+        top: 50%;
+        left: 21%;
+        font-size: 1.0em;
+    }
+    .main-content .button-learn-more{
+        position: absolute;
+        top: 52%;
+        left: 40%;
+        width: 100px;
+        height: 50px;
+    }
+}

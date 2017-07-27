@@ -1,0 +1,294 @@
+/*-----------------------------
+                               |
+ * Filename: sign-up.css       |
+                               |
+ * Version: v1.0               |
+ * Website: signup.php         |
+ * Author: Ken and Leong       |
+                               |
+                               |
+-------------------------------*/
+
+body{
+    font-family: Calibri, sans-serif;
+}
+
+/* Wrapper to contain the sign-up form */
+.register-wrapper {
+    position: absolute;
+    width: 100%;
+    min-height: 110%;
+    top:-20px;
+    background: #50a3a2;
+    background: -webkit-linear-gradient(top left, #ffffff 0%, #b5ecff 100%);
+    background: -moz-linear-gradient(top left, #ffffff 0%, #b5ecff 100%);
+    background: -o-linear-gradient(top left, #ffffff 0%, #b5ecff 100%);
+    background: linear-gradient(to bottom right, #ffffff 0%, #b5ecff 100%);
+}
+
+/* The sign up form in register wrapper */
+#sign-up {
+    position: relative;
+    left: 8%;
+    z-index:888;
+    width: 40%;
+    min-height: inherit;
+    display: inline-block;
+    justify-content: center;
+}
+
+/* The picture in register wrapper */
+.picture-wrapper {
+    z-index:888;
+    position: absolute;
+    width: 60%;
+    height: 100%;
+    float:right;
+}
+
+/* The title of sign-up form */
+.title {
+    z-index:888;
+    color: #444;
+    font-size: 1.5em;
+    font-weight: bold;
+    width: 53%;
+    margin: 0 0 30px 0;
+    border-bottom: 1px solid #cccccc;
+    padding-bottom: 20px;
+}
+
+/* CSS Design for strong tag */
+strong {
+    z-index:888;
+    position: relative;
+    width: 53%;
+    padding-bottom: 25px;
+}
+
+/* The first row of sign up form */
+#user-first-last {
+    position: relative;
+    left:4%;
+    z-index:888;
+    width: 55%;
+    display: inline-flex;
+    justify-content: space-between;
+}
+
+/* The firstname input field on the first row */
+#user-first-last > input#firstname{
+    width: 50%;
+    margin-left: -26px;
+    z-index:888;
+    display: block;
+    padding: 15px 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 2px;
+    color: #000000;
+}
+
+/* The lastname input field on the first row */
+#user-first-last > input#lastname{
+    width: 50%;
+    margin-left:5px;
+    z-index:888;
+    display: block;
+    padding: 15px 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 2px;
+    color: #000000;
+}
+
+/* The input field in the sign-up form */
+#sign-up > input {
+    z-index:888;
+    display: block;
+    padding: 15px 10px;
+    margin-bottom: 10px;
+    width: 55%;
+    border: 1px solid #ddd;
+    border-radius: 2px;
+}
+
+/* The input field in the sign-up form when it is focused */
+#sign-up > input:focus{
+    z-index:888;
+    outline: none;
+}
+
+/* CSS Design for a tag */
+a {
+    z-index:888;
+    font-size: 1.0em;
+    color: #2196F3;
+    text-decoration: none;
+    cursor:pointer;
+}
+
+/* CSS Design for input submit button */
+input[type=submit]{
+    z-index:888;
+    width: 48%;
+    height: 53%;
+    cursor:pointer;
+    padding: 15px 15px;
+    margin-bottom: 20px;
+    position: relative;
+    top:10px;
+    left: 10px;
+    background: #2196F3;
+    color: #fff;
+    display: block;
+    border: 0 solid rgba(0,0,0,0.1);
+    border-radius: 2px;
+    transform: rotateZ(0deg);
+    transition: all 0.1s ease-out;
+}
+
+/* The wrapper to contain the sign-in link */
+.sign-in-wrapper {
+    position: absolute;
+    top: 27%;
+    left: -3%;
+    z-index:10000;
+    width: 50%;
+    font-size: 1.2em;
+    padding:15px 25px 10px 25px;
+    border-radius:3px;
+    background-color: transparent;
+}
+
+/* The input field when it is focused */
+input:focus {
+    outline: none;
+}
+
+/* The class for error message display */
+.error-Message {
+    font-size: inherit;
+    color: red;
+    z-index:888;
+}
+
+/* Desktop size to standard 1300 (devices and browsers) */
+@media only screen and (max-width: 1300px) {
+   .register-wrapper #sign-up input {
+       width: 60%;
+   }
+   .register-wrapper #sign-up #user-first-last{
+       margin-left: 10px;
+       width: 54%;
+   }
+   .register-wrapper .sign-in-wrapper {
+       width: 70%;
+   }
+}
+
+/* Tablet Portrait size to standard 960 (devices and browsers) */
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+
+    .register-wrapper #sign-up {
+        left: 22%;
+    }
+    .register-wrapper #sign-up #user-first-last{
+        left:1%;
+        width: 50%;
+    }
+    .register-wrapper #sign-up input {
+        width: 50%;
+    }
+    .register-wrapper #sign-up {
+        width: 100%;
+    }
+    .register-wrapper > img{
+        display:none;
+    }
+    .register-wrapper #sign-up a > img {
+        position: relative;
+        left: 7%;
+    }
+
+}
+
+/* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+    .register-wrapper #sign-up {
+        left: 20%;
+        width: 100%;
+    }
+    .register-wrapper #sign-up #user-first-last {
+        margin-left: 15px;
+        width: 50%;
+    }
+    .register-wrapper > img{
+        display:none;
+    }
+    .register-wrapper #sign-up input {
+        margin-left: 19px;
+        width: 50%;
+    }
+    .register-wrapper #sign-up a >img {
+        position: relative;
+        left: -2%;
+    }
+}
+
+/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
+@media only screen and (min-width: 280px) and (max-width: 550px) {
+    .register-wrapper #sign-up {
+        left: 20%;
+        width: 100%;
+    }
+    .register-wrapper #sign-up #user-first-last {
+        left: 5%;
+        width: 60%;
+    }
+    .register-wrapper #sign-up input {
+        position: relative;
+        left: -5%;
+        width: 70%;
+    }
+    .register-wrapper .sign-in-wrapper {
+        width: 70%;
+    }
+    .register-wrapper #sign-up a >img {
+        position: relative;
+        left: -10%;
+    }
+}
+
+/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
+@media only screen and (max-width: 479px) {
+    .register-wrapper #sign-up {
+        width: 100%;
+    }
+    .register-wrapper > img{
+        display:none;
+    }
+    .register-wrapper .sign-in-wrapper {
+        width: 70%;
+    }
+}
+
+/* Mobile Landscape to Portrait Size (devices and browsers) */
+@media only screen and (max-width: 280px) {
+    .register-wrapper #sign-up #user-first-last{
+        width: 60%;
+    }
+    .register-wrapper .sign-in-wrapper {
+        width: 60%;
+    }
+    .register-wrapper #sign-up a > img{
+        position: relative;
+        left: -15%;
+    }
+    .register-wrapper #sign-up #user-first-last {
+        width: 70%;
+    }
+    .register-wrapper #sign-up input {
+        width: 70%;
+    }
+}

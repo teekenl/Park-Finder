@@ -1,0 +1,889 @@
+/*-----------------------------
+                               |
+ * Filename: review.css        |
+                               |
+ * Version: v1.0               |
+ * Website: review.php         |
+ * Author: Ken and Leong       |
+                               |
+                               |
+-------------------------------*/
+
+body{
+    font-family: Calibri, sans-serif;
+    background-color: white;
+}
+
+/* To create background overlay */
+#nav-review-background-overlay{
+    position: absolute;
+    top: 8%;
+    left: -8px;
+    border-right: 10px solid transparent;
+    z-index: -200;
+    width: 100%;
+    height: 2000px;
+    border-right: 10px solid transparent;
+    background: #ededed;
+}
+
+/* Nav Wrapper to contain the item to be reviewed */
+#nav-review-wrapper {
+    position: relative;
+    width: 70%;
+    padding: 10px;
+    height: auto;
+    margin: auto;
+    background-color: white;
+    box-shadow: 1px 3px 5px 4px rgba(0,0,0,0.2);
+}
+
+/* Review Place Name */
+#review-place-name {
+    font-weight: bold;
+    color: #000000;
+    font-size: 2em;
+    margin: 5px;
+}
+
+/* Review Rating  */
+.review-place-rating-main {
+    margin:3px 5px 3px 10px;
+    border-radius:50%;
+    width:30px;
+    height:20px;
+    background-color:#2b79ff;
+    color: #2b79ff;
+    font-size:0.7em;
+}
+
+/* Review Address */
+#review-place-address {
+    font-weight: 500;
+    color: #000063;
+    font-size: 1.1em;
+    margin: 15px 0 15px 5px;
+}
+
+/* Wrapper to contains information about rating */
+#review-rating-wrapper {
+    float: right;
+    position: absolute;
+    top: 8%;
+    left: 70%;
+}
+
+/* Rating Level - Example Good, Bad or Moderate */
+#review-rating-level {
+    font-size: 2em;
+    color: #000073;
+    font-weight: bold;
+}
+
+/* Number of customer  */
+#review-rating-customer {
+    color: #999999;
+}
+
+/* Number of rating */
+#review-rating-count {
+    font-size: 1.2em;
+}
+
+/* The CSS Design for span tag in Number of Rating  */
+#review-rating-count > span {
+    font-size: 2em;
+    color: #000073;
+}
+
+/* The CSS Design for a tag in View link  */
+#review-view-content > a {
+    cursor: pointer;
+    color: dodgerblue;
+    font-size: 1.2em;
+}
+
+
+/*  The CSS Design for a tag in View link changed when it is hover  */
+#review-view-content > a:hover{
+    text-decoration: underline;
+}
+
+/*  The element to contain the further detail such distance travel */
+#review-view-further-detail {
+    margin: 20px 5px 5px 0;
+    font-size: 1.5em;
+}
+
+/*  The distance travel in review further detail wrapper */
+#review-distance-travel {
+    color: gray;
+    margin-bottom: 30px;
+}
+
+
+/*  The a tag for get direction in review further detail wrapper */
+#review-distance-get-direction a {
+    font-weight: 500;
+    cursor: pointer;
+    color: dodgerblue;
+    background-color: white;
+    border-radius: 3px;
+    border: 1px solid dodgerblue;
+    text-align: center;
+    width: 50%;
+    padding: 10px 20px 10px 20px;
+    box-shadow: 1px 1px 1px 1px rgba(0,0,0,0.2);
+}
+
+/*  The a tag for get direction in review further detail wrapper is changed when it is clicked */
+#review-distance-get-direction>  a:hover,#review-distance-get-direction > a:active{
+    color: white;
+    background-color:dodgerblue;
+}
+
+/*  The element to contain a small map */
+#review-place-map {
+    margin: 40px 5px 5px 0;
+    width: 270px;
+    height: 130px;
+    padding: 5px;
+    background-color: white;
+    box-shadow: 1px 1px 2px 2px rgba(0,0,0,0.2);
+    cursor:pointer;
+}
+
+/* To create background overlay at the back of review place map */
+#review-map-overlay {
+    position:absolute;
+    left: 3%;
+    margin-top: 2px;
+    width: 265px;
+    height: 125px;
+    background: rgba(0,0,0,0.3);
+    z-index:1000;
+}
+
+/* Image at the back of review place map */
+#review-map-image {
+    position: absolute;
+    margin-top: 2px;
+    left: 3%;
+    width: 265px;
+    height: 125px;
+}
+
+/* Button of review place map */
+#review-map-button{
+    position: relative;
+    top: 28%;
+    left: 29%;
+    font-weight: 600;
+    color: black;
+    font-size: 1.3em;
+    padding: 8px;
+    z-index: 2000;
+    border: 2px solid grey;
+    border-radius: 2px;
+    outline: none;
+    background-color: white;
+    cursor: pointer;
+}
+
+/* Button of review place map is changed when it is hover */
+#review-map-button:hover{
+    border-color: black;
+}
+
+
+/* The wrapper to content the review of customer */
+#review-content-wrapper {
+    margin: 5px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    height: 700px;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.2);
+}
+/* The container to content the review of customer */
+.review-content-container {
+    position: relative;
+    margin: 5px 0 5px 0;
+    padding: 8px 5px 12px 5px;
+    height: 150px;
+    border: 1px solid #999999;
+}
+
+/* The profile details of customer for particular review */
+.customer-profile-details {
+    position: absolute;
+}
+
+/* The rating level of customer for particular review */
+.customer-rating-level {
+    position: relative;
+    font-weight: 700;
+    font-size: 2.0em;
+    color: #000;
+    top: 5%;
+    left: 10%;
+}
+
+/* The name of customer for particular review */
+.customer-profile-name {
+    position: relative;
+    top: 5%;
+    left: 10%;
+    font-weight: 300;
+    font-size: 1.1em;
+}
+
+/* The headline for particular review */
+.customer-profile-comment-headline {
+    position: relative;
+    top: 2%;
+    left: 30%;
+    font-size: 1.6em;
+    font-weight: 700;
+}
+
+/* The content for particular review */
+.customer-profile-comment-content {
+    position: relative;
+    top: 20%;
+    left: 30%;
+    width: 750px;
+    height: auto;
+    font-size: 1.1em;
+}
+
+/* The posting date for particular review */
+.customer-profile-posting-date {
+    position: relative;
+    top: 8%;
+    left: 30%;
+    font-weight: 300;
+    font-size: 1.1em;
+    color: #000;
+}
+
+/* Modal box to contain google map */
+#review-modal-map {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 3000;
+    top:0;
+    left: 0;
+    margin-top: -1000px;
+    background: rgba(0,0,0,0.8);
+    display: block;
+}
+
+/* Wrapper to contain review map wrapper */
+#review-map-wrapper {
+    position: relative;
+    width: 60%;
+    height: 70%;
+    top: 3%;
+    background: white;
+    left: 20%;
+}
+
+/* The space where the map is located in modal map box*/
+#review-map-canvas{
+    position: relative;
+    top: 10%;
+    width:100%;
+    height:700px;
+}
+
+/* The close button in modal map box*/
+#review-map-wrapper-close {
+    position: absolute;
+    top: 2%;
+    right: 0;
+    width: auto;
+    height: auto;
+    cursor:pointer;
+    margin: 0 15px 5px 0;
+}
+
+/* The close button in modal map box is changed when it is hover */
+#review-map-wrapper-close:hover{
+    color: #000;
+}
+
+
+/* Modal box for making review */
+#modal-box {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 3000;
+    top:0;
+    left: 0;
+    background-color: rgba(0,0,0,0.8);
+    display: none;
+}
+
+/* Modal box for making review */
+#review-modal-box {
+    width: 730px;
+    height: 600px;
+    position: absolute;
+    top: 10%;
+    left: 28%;
+    border-radius: 8px;
+    background-color: white;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+/* The title of modal box */
+#review-write-title {
+    position: absolute;
+    top: 0;
+    width: 710px;
+    height: auto;
+    color: white;
+    background-color: #4d4d4d;
+    font-family: inherit;
+    font-size: 1.2em;
+    font-weight: bold;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    padding: 20px 0 20px 20px;
+}
+
+/* The close button of review modal box */
+#review-write-close{
+    position: absolute;
+    top: 2%;
+    right: 0;
+    width: auto;
+    height: auto;
+    cursor:pointer;
+    margin: 0 15px 5px 0;
+    color: #FFFFFF;
+}
+
+/* The close button of review modal box is changed when it is hover */
+#review-write-close:hover{
+    color: #000;
+}
+
+/* The CSS Design for form of making review */
+#review-write-form {
+    position: relative;
+    width: inherit;
+    height: 500px;
+    top: 5%;
+    left: 9%;
+    align-items: center;
+    font-family: inherit;
+    font-size: 1.2em;
+}
+
+
+/* The CSS Design for label selector in review form */
+#review-write-form > label {
+    position: absolute;
+    left: 12%;
+}
+
+/* The CSS Design for label selector in review form */
+#label-comment {
+    top: 20%;
+}
+
+/* The CSS Design for input text in review form */
+#review-write-form input[type=text] {
+    border-radius: 2px;
+    outline: none;
+    border: 1px solid #000;
+    padding: 10px 5px 10px 10px;
+    margin: 2px 5px 5px 90px;
+    width: 430px;
+    font-size: 0.9em;
+}
+
+/* The CSS Design for textarea in review form */
+#review-write-form textarea {
+    padding: 10px 5px 10px 10px;
+    font-size: 1.0em;
+    font-family: inherit;
+    border: 1px solid #000;
+    border-radius: 2px;
+    outline: none;
+    width: 430px;
+    height: 150px;
+    margin: 5px 5px 5px 90px;
+    font-weight: 400;
+}
+
+/* The CSS Design for rating star in review form */
+#review-write-form #ratingStar>label,
+#review-write-form .circle-rating-choose {
+    float: left;
+    margin: 5px 5px 5px 85px;
+}
+
+/* The CSS Design for rating star in review form */
+#review-write-form .circle-rating-choose > label {
+    position: relative;
+    left: 0;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    float: right;
+    margin: 10px 5px 0 5px;
+    cursor:pointer;
+    border: 1px solid dodgerblue;
+}
+
+/* The CSS Design for input radio button in review form */
+#review-write-form input[type=radio] {
+    display: none;
+    position: relative;
+}
+
+/* NO-review result to show  */
+#no-review-result{
+    position: relative;
+    top: 20%;
+    left: 43%;
+    font-size: 2.5em;
+    color: #aaaaaa;
+}
+
+/* The CSS Design when the rating star is selected or not  */
+.circle-rating-choose > label:hover,
+.circle-rating-choose > label:hover ~ label,
+.circle-rating-choose > input:checked ~ label,
+.circle-rating-choose > input:checked > label {
+    background-color: dodgerblue;
+}
+
+/* The CSS Design for placeholder in the textarea */
+#review-write-form textarea::-webkit-input-placeholder {
+    font-size: 1.0em;
+}
+
+/* The CSS Design for input submit button */
+#review-write-form input[type=submit]{
+    position: absolute;
+    left: 12%;
+    top: 83%;
+    color: white;
+    font-family: inherit;
+    font-size: inherit;
+    background-color: dodgerblue;
+    border-radius: 3px;
+    border: none;
+    padding: 8px 10px 8px 10px;
+    margin-left: 15px;
+    width: 58%;
+    cursor: pointer;
+    outline: none;
+    box-shadow: 0 0 1px 1px rgba(0,0,0,0.2);
+}
+
+/* The button to open the review form */
+#button-write-review {
+    position: absolute;
+    top: 3%;
+    right: 5%;
+    float: right;
+    cursor: pointer;
+    background-color: dodgerblue;
+    font-size: 1.1em;
+    color: white;
+    padding: 10px;
+    font-weight: 700;
+    border-radius: 3px;
+    border: 1px solid dodgerblue;
+    box-shadow: 0 5px 5px 0 rgba(0,0,0,0.2);
+}
+
+/* The button to open the review form is changed when it is hover */
+#button-write-review:active {
+    outline: none;
+    box-shadow: 0 0 0 0 rgba(0,0,0,0.2);
+}
+
+/* The wrapper to contain footer */
+#footer{
+    color: white;
+    font-size: 1.3em;
+    position: absolute;
+    top: 230%;
+    left:-2px;
+    width: 100%;
+    height: 50%;
+    background-color: #aaaaaa;
+}
+
+/* The wrapper to contain the footer content */
+#footer #footer-wrapper{
+    width: 80%;
+}
+
+/*The right wrapper of footer content */
+#footer #right-wrapper {
+    float: right;
+}
+
+/*The left wrapper of footer content */
+#footer #left-wrapper {
+    float:left;
+    position: absolute;
+    left:25%;
+}
+
+/* The error message to show */
+.error-Message {
+    position:absolute;
+    left: 12%;
+    color: red;
+    font-size: 0.8em;
+}
+
+/* Desktop size to standard 1700 (devices and browsers) */
+@media only screen and (max-width:  1700px) {
+    #nav-review-wrapper #review-place-image img {
+        width: 67%;
+    }
+}
+
+/* Desktop size to standard 1500 (devices and browsers) */
+@media only screen and (max-width: 1500px) {
+    #review-place-map,
+    #review-map-overlay,
+    #review-map-image {
+        width: 100%;
+    }
+    #review-place-map button {
+        left: 20%;
+    }
+
+    .dropdown-login {
+        left: 86%;
+    }
+}
+
+/* Desktop size to standard 1300 (devices and browsers) */
+@media only screen and (max-width: 1300px) {
+    #nav-review-wrapper #review-place-image img {
+        height: auto;
+    }
+    #review-distance-get-direction {
+        display:none;
+    }
+    #review-map-overlay,
+    #review-map-image {
+        display:none;
+    }
+    #review-place-map {
+        height: 50%;
+    }
+
+    #footer {height:100%;}
+
+    #footer #right-wrapper {
+        position: absolute;
+        float: left;
+        top: 50%;
+        left: 25%;
+    }
+
+    #footer #left-wrapper {
+        float: left;
+        position: absolute;
+        left:25%;
+    }
+    .dropdown-login {
+        left:85%;
+    }
+}
+
+/* Desktop size to standard 1100 (devices and browsers) */
+@media only screen and (max-width: 1100px) {
+    .review-place-rating-main{
+        display:none;
+    }
+    .dropdown-login{
+        left: 83%;
+    }
+    #review-place-map {
+        display:none;
+    }
+
+    #review-modal-box {
+        left: 10%;
+    }
+
+}
+
+/* Tablet Portrait size to standard 960 (devices and browsers) */
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+    .review-place-rating-main{
+        display:none;
+    }
+    .dropdown-login {
+        width: 230px;
+        left: 75%;
+    }
+    #review-place-map {
+       display: none;
+    }
+    #menu a #main-picture {
+        position: absolute;
+        left: 0;
+    }
+    #review-rating-wrapper {
+        margin-top: 20px;
+    }
+    #review-rating-level {
+        font-size:1.1em;
+    }
+    #review-distance-travel,
+    #review-rating-count {
+        font-size: 0.8em;
+    }
+    #review-place-name {
+        font-size: 1.7em;
+    }
+    #review-modal-box {
+        width: 90%;
+        left: 4%;
+    }
+    #review-write-title {
+        width: 97%;
+    }
+
+}
+
+/* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+    #review-rating-wrapper {
+        margin-top: 20px;
+    }
+    #review-rating-level {
+        font-size:1.1em;
+    }
+    #review-distance-travel,
+    #review-rating-count {
+       font-size: 0.8em;
+    }
+    #nav-review-wrapper #review-place-image img {
+        height: 160px;
+    }
+
+    #review-place-name {
+        font-size: 1.7em;
+    }
+
+    .customer-profile-comment-headline,
+    .customer-rating-level{
+        font-size:1.4em;
+    }
+    .dropdown-login {
+        width: 200px;
+        left: 71%;
+    }
+    #menu a #main-picture {
+        position: absolute;
+        left: 0;
+    }
+    #review-modal-box {
+        width: 80%;
+        left: 4%;
+    }
+    #review-modal-box{
+        left: 10%;
+    }
+    #review-write-form {
+        left: 5%;
+    }
+    #review-write-form textarea,
+    #review-write-form input[type=text] {
+        width: 70%;
+    }
+    #review-write-form input[type=submit] {
+        margin-left: 60px;
+    }
+
+    #review-write-title {
+        width: 97%;
+    }
+}
+
+/* Desktop size to standard 500 and 700 (devices and browsers) */
+@media only screen and (min-width: 550px) and (max-width:700px){
+    #review-place-name {
+        font-size: 1.4em;
+    }
+    #review-view-content{
+        display:none;
+    }
+    #button-write-review{
+        font-size:0.8em;
+    }
+    .customer-profile-comment-headline,
+    .customer-rating-level{
+        font-size:1.2em;
+    }
+    .customer-profile-posting-date{
+        font-size:0.8em;
+    }
+    .customer-profile-comment-content{
+        font-size:1.0em;
+    }
+
+}
+
+@media only screen and (min-width: 280px) and (max-width: 550px) {
+    .dropdown-login {
+        left: 62%;
+    }
+    #menu a #main-picture {
+        position: absolute;
+        left: 0;
+    }
+    #review-place-name {
+        font-size: 1.4em;
+    }
+    #review-view-content{
+        display:none;
+    }
+    #review-distance-travel {
+        display:none;
+    }
+    #button-write-review{
+        font-size:0.8em;
+        top: 26%;
+        left:5%;
+    }
+    .customer-profile-comment-headline,
+    .customer-rating-level{
+        font-size:1.2em;
+    }
+    .customer-profile-comment-headline{
+        margin-left: 20px;
+    }
+    .customer-profile-posting-date{
+        margin-left: 20px;
+        font-size:0.8em;
+    }
+    .customer-profile-comment-content{
+        width:60%;
+        margin-left: 20px;
+        font-size:1.0em;
+    }
+    #review-modal-box {
+        width: 80%;
+        left: 4%;
+    }
+    #review-modal-box{
+        left: 10%;
+    }
+    #review-write-form {
+        left: -2%;
+    }
+    #review-write-form textarea,
+    #review-write-form input[type=text] {
+        width: 80%;
+    }
+    #review-write-form input[type=submit] {
+        margin-top:10px;
+        margin-left: 80px;
+    }
+
+    #review-write-title {
+        width: 95%;
+    }
+
+}
+
+/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
+@media only screen and (max-width: 479px) {
+    .dropdown-login {
+        left:54%;
+
+    }
+    #nav-review-wrapper #review-place-image img {
+        margin-left:30px;
+        width: 220px;
+    }
+
+    #menu a #main-picture {
+        position: absolute;
+        left: 0;
+    }
+    #review-place-name,
+    #review-place-address{
+        margin:12px;
+        font-size: 1.1em;
+    }
+
+    #review-rating-level,
+    #review-rating-customer,
+    #review-view-content,
+    #review-distance-travel {
+        display:none;
+    }
+    #review-rating-count {
+        margin-left:-20px;
+        margin-top: 155px;
+        font-size: 0.8em;
+    }
+
+    #button-write-review{
+        font-size:0.8em;
+        top: 23%;
+        left:5%;
+    }
+    .customer-profile-comment-headline,
+    .customer-rating-level{
+        font-size:1.2em;
+    }
+    .customer-profile-comment-headline{
+        margin-left: 20px;
+    }
+    .customer-profile-posting-date{
+        margin-left: 20px;
+        font-size:0.8em;
+    }
+    .customer-profile-comment-content{
+        width:60%;
+        margin-left: 20px;
+        font-size:1.0em;
+    }
+
+    #review-modal-box {
+        width: 80%;
+        left: 4%;
+    }
+    #review-modal-box{
+        left: 10%;
+    }
+    #review-write-form {
+        left: -5%;
+    }
+    #review-write-form textarea,
+    #review-write-form input[type=text] {
+        width: 80%;
+    }
+    #review-write-form input[type=submit] {
+        margin-top:10px;
+        margin-left: 80px;
+    }
+
+    #review-write-title {
+        width: 95%;
+    }
+
+}
+
